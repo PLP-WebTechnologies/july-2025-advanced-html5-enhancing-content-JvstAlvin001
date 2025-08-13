@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serenity Beauty Parlour & Spa</title>
+  <meta name="description" content="Serenity Beauty Parlour & Spa offers relaxing spa treatments, professional beauty services, and a luxurious experience." />
+  <link rel="canonical" href="https://example.com/" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Serenity Beauty Parlour & Spa</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#price-list">Price List</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Book Appointment</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Facials</li>
+        <li>Massage Therapy</li>
+        <li>Hair Styling</li>
+        <li>Manicure & Pedicure</li>
+      </ul>
+    </section>
+
+    <section id="price-list">
+      <h2>Price List</h2>
+      <table border="1" cellspacing="0" cellpadding="5">
+        <caption>Service Prices</caption>
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Facial</td>
+            <td>60 min</td>
+            <td>$50</td>
+          </tr>
+          <tr>
+            <td>Massage Therapy</td>
+            <td>90 min</td>
+            <td>$80</td>
+          </tr>
+          <tr>
+            <td>Hair Styling</td>
+            <td>45 min</td>
+            <td>$40</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <figure>
+        <img src="https://via.placeholder.com/400x250" alt="Spa interior view" />
+        <figcaption>Our relaxing spa interior</figcaption>
+      </figure>
+      <figure>
+        <img src="https://via.placeholder.com/400x250" alt="Hair styling in progress" />
+        <figcaption>Professional hair styling service</figcaption>
+      </figure>
+    </section>
+
+    <section id="booking">
+      <h2>Book Your Appointment</h2>
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="fullname">Full Name:</label>
+          <input id="fullname" name="fullname" type="text" required minlength="3" />
+
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="phone">Phone:</label>
+          <input id="phone" name="phone" type="tel" pattern="[0-9]{10}" placeholder="e.g. 0712345678" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Appointment Details</legend>
+          <label for="service">Select Service:</label>
+          <select id="service" name="service" required>
+            <option value="">--Please choose an option--</option>
+            <option value="facial">Facial</option>
+            <option value="massage">Massage Therapy</option>
+            <option value="hair">Hair Styling</option>
+            <option value="manicure">Manicure & Pedicure</option>
+          </select>
+
+          <label for="date">Preferred Date:</label>
+          <input id="date" name="date" type="date" required />
+
+          <label for="time">Preferred Time:</label>
+          <input id="time" name="time" type="time" required />
+
+          <label>Extra Options:</label>
+          <input type="checkbox" id="aromatherapy" name="extras" value="aromatherapy" />
+          <label for="aromatherapy">Aromatherapy</label>
+          <input type="checkbox" id="hotstones" name="extras" value="hotstones" />
+          <label for="hotstones">Hot Stones</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment Method</legend>
+          <input type="radio" id="card" name="payment" value="card" required />
+          <label for="card">Credit/Debit Card</label>
+          <input type="radio" id="cash" name="payment" value="cash" />
+          <label for="cash">Cash</label>
+        </fieldset>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Serenity Beauty Parlour & Spa</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
